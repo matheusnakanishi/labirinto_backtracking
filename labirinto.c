@@ -157,3 +157,15 @@ void imprimir_caminho(No *no){
     
     printf("(%d,%d) ",aux->x, aux->y);
 }
+
+void liberar_pilha(Pilha *pilha){
+    while (pilha->topo)
+        voltar(pilha);
+}
+
+void liberar_matriz(int **mat, int n){
+    for (int i = 0; i < n; i++)
+        free(mat[i]);
+    
+    free(mat);
+}
