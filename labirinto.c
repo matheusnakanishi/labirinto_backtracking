@@ -101,9 +101,9 @@ void achar_caminho(Pilha *pilha, Coordenadas fim, int **mat, int n){
             mat[i][j] = 5;  //Valor 5 atribuído para identificar caminho bloqueado.
         }
 
-        system("clear");
         imprimir_labirinto(mat, n, pilha); //Atualiza o labirinto.
-        usleep(200000);
+        SLEEP;
+        CLEAR;
     }
 }
 

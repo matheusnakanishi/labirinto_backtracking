@@ -1,6 +1,16 @@
 #ifndef LABIRINTO_
 #define LABIRINTO_
 
+#ifdef _WIN32 || _WIN64
+    #include <Windows.h>
+    #define SLEEP Sleep(200)
+    #define CLEAR system("cls")
+#else
+    #include <unistd.h>
+    #define SLEEP usleep(200000)
+    #define CLEAR system("clear")
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
